@@ -15,7 +15,6 @@ RUN a2enmod rewrite
 ADD wp-config.php /app/wp-config.php
 ADD run.sh /run.sh
 RUN chmod +x /*.sh
-RUN mkdir /app/wp-content
 
 EXPOSE 80
 CMD ["/run.sh"]
