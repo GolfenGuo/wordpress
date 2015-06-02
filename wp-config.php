@@ -25,7 +25,7 @@ define('DB_USER', getenv('MYSQL_USERNAME'));
 define('DB_PASSWORD', getenv('MYSQL_PASSWORD'));
 
 /** MySQL hostname */
-define('DB_HOST', getenv('MYSQL_PORT_3306_TCP_ADDR').":".getenv('MYSQL_PORT_3306_TCP_PORT'));
+define('DB_HOST', getenv('MYSQL_HOST').":".getenv('MYSQL_PORT'));
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -78,7 +78,7 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* That's all, stop editing! Happy blogging. */
 

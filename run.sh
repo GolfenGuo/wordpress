@@ -3,8 +3,8 @@
 chown www-data:www-data /app -R
 chmod -R 777 /app/wp-content
 
-MYSQL_HOST=${MYSQL_PORT_3306_TCP_ADDR:-${MYSQL_HOST}}
-MYSQL_PORT=${MYSQL_PORT_3306_TCP_PORT:-${MYSQL_PORT}}
+export MYSQL_HOST=${MYSQL_HOST:-${MYSQL_PORT_3306_TCP_ADDR}}
+export MYSQL_PORT=${MYSQL_PORT:-${MYSQL_PORT_3306_TCP_PORT}}
 
 echo "=> Using the following MySQL configuration:"
 echo "========================================================================"
